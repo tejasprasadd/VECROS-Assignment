@@ -49,6 +49,7 @@ The environment is represented as a 3D grid, specifically a NumPy array.
 Each agent individually plans its path from its starting point to its goal using the A\* search algorithm.
 
 - **Chebyshev Distance Heuristic:** The A\* algorithm uses the Chebyshev distance as its heuristic function. The Chebyshev distance is appropriate for movement that allows all 26 possible directions (including diagonals in 3D). It calculates the maximum absolute difference in any single coordinate between two points.
+  ![26-Directional-Movement](image.png)
 - **26-Directional Movement:** Agents are allowed to move in 26 directions from any given cell (all possible combinations of dx, dy, and dz being -1, 0, or 1, excluding no movement).
 - **Cost Calculation:** The cost to move from one cell to a neighboring cell is 1 for free space. The cost to move into an obstacle cell is significantly higher (10), making the algorithm prefer paths that avoid obstacles.
 
