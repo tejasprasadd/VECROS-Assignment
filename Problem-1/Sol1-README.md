@@ -96,5 +96,5 @@ The generated paths for each agent are visualized in 3D using Matplotlib.
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/tejasprasadd/VECROS-Assignment.git
-   cd Problem-1
+   cd VECROS-Assignment/Problem-1
    ```
