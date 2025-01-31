@@ -132,16 +132,17 @@ def plot_paths(paths):
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
 
-    colors = ['red', 'blue', 'green', 'purple', 'orange']  # Add more colors
+    colors = ['red', 'blue', 'green', 'purple', 'orange','pink','yellow','black']  # Add more colors
     for i, path in enumerate(paths):
         if not path:
             continue
         x, y, z = zip(*path)
-        ax.plot(x, y, z, color=colors[i % len(colors)], marker='o', markersize=2)  # Cycle colors
+        ax.plot(x, y, z, color=colors[i % len(colors)], marker='o', markersize=2, label=f'Path {i+1}')  # Cycle colors
 
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
+    ax.legend()
     plt.show()
 
 

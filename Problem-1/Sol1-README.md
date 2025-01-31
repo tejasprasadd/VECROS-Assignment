@@ -14,11 +14,6 @@ Welcome to the **3D Pathfinding with Conflict Avoidance** project! This project 
    - [2.4 Visualization](#24-visualization)
 3. [Key Features](#key-features)
 4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Visualization Details](#visualization-details)
-7. [Applications](#applications)
-8. [Contributing](#contributing)
-9. [License](#license)
 
 ---
 
