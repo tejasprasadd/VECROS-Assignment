@@ -8,8 +8,9 @@ This project is an autonomous drone mission planner that creates a 15-waypoint m
 
 1. [Overview](#overview)
 2. [Features](#features)
-3. [Prerequisites](#prerequisites)
-4. [Installation](#installation)
+3. [Usage](#Usage)
+4. [Prerequisites](#prerequisites)
+5. [Installation](#installation)
 
 ---
 
@@ -36,6 +37,40 @@ The project uses `dronekit` for high-level mission planning and `pymavlink` for 
 
 ---
 
+## Usage
+
+The mission planner requires a running SITL (Software In The Loop) simulator.
+
+### 1. Start the Simulator
+
+Open a terminal window and run the following command:
+
+```bash
+dronekit-sitl copter-3.3 --home=12.979327,77.590920,584,353
+```
+
+This command will:
+
+Start a simulated Copter (version 3.3).
+Set the home location to Bengaluru (12.979327°N, 77.590920°E) with an altitude of 584 meters and a yaw of 353 degrees. (Note: The yaw parameter might not be strictly necessary for this mission)
+Establish a local connection at tcp:127.0.0.1:5760.
+Important: Keep this terminal window open while running the mission planner. The simulator must be running for the script to connect.
+
+2. Run the Mission Planner
+   Open a second terminal window (preferably within your activated virtual environment if you created one) and execute the following command:
+
+```bash
+python mission_plan.py
+```
+
+The script will:
+
+Connect to the simulator
+Generate and upload the mission
+Arm and launch the drone
+Display real-time updates in the terminal
+Show a trajectory plot after mission completion
+
 ## Prerequisites
 
 Before running the project, ensure you have the following installed:
@@ -45,3 +80,7 @@ Before running the project, ensure you have the following installed:
   ```bash
   pip install dronekit dronekit-sitl pymavlink matplotlib
   ```
+
+```
+
+```
